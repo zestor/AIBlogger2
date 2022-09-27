@@ -1,0 +1,10 @@
+I am an expert in Artificial Intelligence (AI), Machine Learning, Neural Networks, and Large Language Models(LLM). Brainstorm an outline for the TOPIC with 25 SECTIONS which are highly descriptive and stay within the TOPIC. No TOPIC should be an introduction, conclusion, bibliography, or Q&A.
+
+TOPIC: "The top challenges facing artificial intelligence."
+
+SECTIONS:
+1.
+
+==========
+
+Defining artificial intelligence 2. The history of artificial intelligence 3. AI applications and use cases 4. The benefits of artificial intelligence 5. The limitations of artificial intelligence 6. safety concerns with artificial intelligence 7. The future of artificial intelligence8.9. 10. ...
