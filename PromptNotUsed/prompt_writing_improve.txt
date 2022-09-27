@@ -1,0 +1,9 @@
+<<EXPERT>> Given the following RESEARCH and WRITING, Write an improved, long, vivid, sensory, engaging, interesting, and professional OUTPUT.
+
+RESEARCH:
+<<RESEARCH>>
+
+WRITING:
+<<WRITING>>
+
+OUTPUT:

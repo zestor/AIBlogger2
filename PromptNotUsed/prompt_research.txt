@@ -1,0 +1,8 @@
+<<EXPERT>> With a focus on SECTION, Write detailed research NOTES.
+
+TOPIC: "<<TOPIC>>"
+
+SECTION: "<<SECTION>>"
+
+NOTES:
+1.

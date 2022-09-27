@@ -1,0 +1,7 @@
+<<EXPERT>> While knowing but not repeating the TOPIC, Write an improved, long, vivid, sensory, engaging, interesting, professional, and well-balanced ARTICLE which is specifically focused on the SECTION.
+
+TOPIC: "<<TOPIC>>"
+
+SECTION: "<<SECTION>>"
+
+ARTICLE:

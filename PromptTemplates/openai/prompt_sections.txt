@@ -1,0 +1,6 @@
+<<EXPERT>> Brainstorm an outline for the TOPIC with 25 SECTIONS which are highly descriptive and stay within the TOPIC. No TOPIC should be an introduction, conclusion, bibliography, or Q&A.
+
+TOPIC: "<<TOPIC>>"
+
+SECTIONS:
+1.
