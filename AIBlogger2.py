@@ -2,7 +2,6 @@
 # -*- coding: utf-8 -*-
 
 import concurrent.futures
-import pprint
 import urllib
 from asyncio import ALL_COMPLETED
 from concurrent.futures.thread import ThreadPoolExecutor
@@ -44,7 +43,7 @@ if __name__ == '__main__':
 
     ZestorHelper.save_file('blog.txt')
 
-    # MULTIPLE SIMULTANEOUS CONCURRENT CALLS TO AI ENGINE
+    # Multiple calls on different threads to AI engine at the same time
     sectionsArray = sectionsText.splitlines()
     prompt_queue = []
     with ThreadPoolExecutor(max_workers=len(sectionsArray)) as executor:
@@ -53,9 +52,10 @@ if __name__ == '__main__':
             prompt_queue.append(executor.submit(WriteSection, EXPERT, TOPIC, section))
             ordinal += 1
 
-    # WAIT FOR ALL SIMULTANEOUS CONCURRENT CALLS TO COMPLETE
+    # Wait for threads to complete
     done, not_done = concurrent.futures.wait(prompt_queue,timeout=None,return_when=ALL_COMPLETED)
 
+    # Loop futures post execution, get writingText, save to dict variable
     for future in prompt_queue:
         try:
             funReturn = future.result()
@@ -63,11 +63,7 @@ if __name__ == '__main__':
         except Exception as exc:
                 print('\n\ngenerated an exception: %s' % (exc))
 
-    print('\n\n+=+=+=+=+=+=+=+=+=+=+=+=+=+=+=+=+=+=+=+=+=+=+=+=+=+=+=+=+=+=+=')
-    pp = pprint.PrettyPrinter(indent=4)
-    pp.pprint(blogJson)
-    print('\n\n+=+=+=+=+=+=+=+=+=+=+=+=+=+=+=+=+=+=+=+=+=+=+=+=+=+=+=+=+=+=+=')
-
+    # Loop sections, retrieve writingText in order, write to blog.txt
     for section in sectionsArray:
         print('Getting "%s"' % (section))
         writingText=blogJson[urllib.parse.quote_plus(section.strip())]
